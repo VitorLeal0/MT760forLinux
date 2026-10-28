@@ -1,0 +1,12 @@
+# Build do Rust
+/app/target/
+# Python
+__pycache__/
+*.pyc
+# Nunca versionar instaladores, binários ou imagens da Rapoo
+*.exe
+*.dll
+*.msi
+# Capturas e arquivos locais
+*.pcapng
+*.etl

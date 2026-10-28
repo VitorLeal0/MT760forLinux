@@ -1,0 +1,11 @@
+[Unit]
+Description=MT760forLinux - remapeamento por software
+After=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/python3 @BIN@ daemon
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target

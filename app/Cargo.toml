@@ -1,0 +1,22 @@
+[package]
+name = "mt760forlinux"
+version = "0.1.0"
+edition = "2024"
+description = "Configurador para Linux do mouse Rapoo MT760L (projeto independente, sem ligação com a Rapoo)"
+license = "GPL-3.0-or-later"
+
+[[bin]]
+name = "mt760"
+path = "src/main.rs"
+
+[dependencies]
+arboard = "3.7.0"
+eframe = { version = "0.37.0", default-features = false, features = ["glow", "wayland", "x11", "default_fonts"] }
+egui_extras = { version = "0.37.0", features = ["svg", "image"] }
+flate2 = "1.1.10"
+image = { version = "0.25.10", default-features = false, features = ["png"] }
+libc = "0.2.191"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+socket2 = { version = "0.6.5", features = ["all"] }
+toml = "1.1.8"

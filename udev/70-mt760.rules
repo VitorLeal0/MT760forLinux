@@ -1,0 +1,4 @@
+# Rapoo MT760L: acesso do usuario logado ao mouse, a interface HID vendor e ao uinput.
+SUBSYSTEM=="input", KERNEL=="event*", ATTRS{idVendor}=="24ae", TAG+="uaccess"
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="24ae", TAG+="uaccess"
+KERNEL=="uinput", SUBSYSTEM=="misc", TAG+="uaccess", OPTIONS+="static_node=uinput"
